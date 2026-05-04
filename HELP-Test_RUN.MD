@@ -1,5 +1,9 @@
 # Test
 
+```bash
+$env:HEADLESS="false"; pytest tests/test_catalog.py::TestCatalog::test_add_cart -v --alluredir=allure-results
+```
+
 ## Если тест в классе
 
 ```bash

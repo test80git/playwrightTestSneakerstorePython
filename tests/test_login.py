@@ -22,6 +22,7 @@ class TestLogin:
         assert catalog_page is not None
         assert catalog_page.get_title() == "Каталог кроссовок"
         assert catalog_page.get_header_text() == "Каталог кроссовок"
+        catalog_page.verify_title("Каталог кроссовок")
 
 
     @allure.title("Тест заголовока Входа")
