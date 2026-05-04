@@ -3,3 +3,4 @@ pytest-playwright
 playwright
 python-dotenv
 allure-pytest
+allure-python-commons

@@ -7,6 +7,7 @@ class BasePage:
         # from your config
         self.page.set_default_timeout(10000)
 
+
     def init_components(self):
         pass
     

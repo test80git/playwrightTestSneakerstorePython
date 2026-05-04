@@ -29,22 +29,22 @@ pipeline {
                     python3 -m pytest tests/ -v --alluredir=allure-results
                 '''
             }
-        }
-        
-        stage('Allure Report') {
-            steps {
-                allure([
-                    includeProperties: false,
-                    results: [[path: 'allure-results']]
-                ])
+            post {
+                always {
+                    // Сохраняем результаты Allure даже при падении
+                    allure([
+                        includeProperties: false,
+                        results: [[path: 'allure-results']]
+                    ])
+                }
             }
         }
     }
     
     post {
         always {
+            // Очистка workspace после сборки
             cleanWs()
         }
     }
 }
-
