@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                     pip3 install --break-system-packages -r requirements.txt
-                    playwright install chromium
+                    python3 -m playwright install chromium
                 '''
             }
         }
